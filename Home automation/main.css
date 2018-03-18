@@ -1,0 +1,33 @@
+body { 
+	text-align: center;
+}
+
+.device img{
+	display: inline-block;
+	width: 100%;
+
+}
+
+.row {
+	display: inline-block;
+	width: 100%;
+	margin: 5px;
+}
+
+.device {
+	display: inline-block;
+	width: 200px;
+	padding-bottom : 10px;
+
+	text-align: center;
+	border: 1px solid black;
+	background: white;
+}
+
+.device button {
+	height: 30px;
+	width: 100px;
+	border: 0px;
+	background: green;
+
+}
