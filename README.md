@@ -1,6 +1,4 @@
-# miniprojects
 A collection of independent projects on data science and IoT completed while pursuing an undergraduate major in Electrical Engineering.
-
 
 ---Backroom Inc---
 
@@ -16,4 +14,4 @@ Contains Python code for Caesar cipher to encrypt a given input text.
 
 ---Hangman---
 
-Contains Python code for Hangman game. Fill in empty blanks with letters to make a word! 
+Contains Python code for Hangman game. Code generates a secret word from a list of words given in a .txt file. Fill in empty blanks with letters to make a word! 
