@@ -10,4 +10,10 @@ a) Change in constituency
 b) Change in party 
 c) Consecutive or immediate recampaigning 
 
+---Cipher---
 
+Contains Python code for Caesar cipher to encrypt a given input text. 
+
+---Hangman---
+
+Contains Python code for Hangman game. Fill in empty blanks with letters to make a word! 
