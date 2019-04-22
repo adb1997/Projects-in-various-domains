@@ -8,8 +8,6 @@ def load_words(file_name):
     
     Returns: a list of valid words. Words are strings of lowercase letters.
     
-    Depending on the size of the word list, this function may
-    take a while to finish.
     '''
     print('Loading word list from file...')
     # inFile: file
@@ -27,16 +25,9 @@ def is_word(word_list, word):
     Determines if word is a valid word, ignoring
     capitalization and punctuation
 
-    word_list (list): list of words in the dictionary.
-    word (string): a possible word.
-    
     Returns: True if word is in word_list, False otherwise
 
-    Example:
-    >>> is_word(word_list, 'bat') returns
-    True
-    >>> is_word(word_list, 'asdf') returns
-    False
+ 
     '''
     word = word.lower()
     word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
@@ -44,9 +35,7 @@ def is_word(word_list, word):
 
 
 def get_story_string():
-    """
-    Returns: a joke in encrypted text.
-    """
+
     f = open("story.txt", "r")
     story = str(f.read())
     f.close()
@@ -62,9 +51,6 @@ class Message(object):
                 
         text (string): the message's text
 
-        a Message object has two attributes:
-            self.message_text (string, determined by input text)
-            self.valid_words (list, determined using helper function load_words
         '''
         self.message_text = text
         self.valid_words = load_words(WORDLIST_FILENAME)
@@ -90,9 +76,7 @@ class Message(object):
         '''
         Creates a dictionary that can be used to apply a cipher to a letter.
         The dictionary maps every uppercase and lowercase letter to a
-        character shifted down the alphabet by the input shift. The dictionary
-        should have 52 keys of all the uppercase letters and all the lowercase
-        letters only.        
+        character shifted down the alphabet by the input shift. 
         
         shift (integer): the amount by which to shift every letter of the 
         alphabet. 0 <= shift < 26
@@ -292,15 +276,7 @@ class CiphertextMessage(Message):
     def decrypt_message(self):
         '''
         Decrypt self.message_text by trying every possible shift value
-        and find the "best" one. We will define "best" as the shift that
-        creates the maximum number of real words when we use apply_shift(shift)
-        on the message text. If s is the original shift value used to encrypt
-        the message, then we would expect 26 - s to be the best shift value 
-        for decrypting it.
-
-        Note: if multiple shifts are  equally good such that they all create 
-        the maximum number of you may choose any of those shifts (and their
-        corresponding decrypted messages) to return
+        and find the "best" one. 
 
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
